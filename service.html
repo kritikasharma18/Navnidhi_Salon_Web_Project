@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navnidhi Salon</title>
+    <link rel="shortcut icon" href="Assets/images/favicon.png" type="image/x-icon">
+    <style>
+        *{
+            box-sizing:border-box
+        }
+        html{
+            scroll-behavior:smooth
+        }
+        body{
+            margin:0;
+            background:#fcf9f2;
+            font-family:'DM Sans',sans-serif
+        }
+        .nav{
+            background-color: #FEFCF7;
+            height:60px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            /* border: 1px solid grey; */
+        }
+        #nav1{
+            height: 100%;
+            width: 60%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            /* border: 1px solid black; */
+        }
+        ul{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;     
+            /* border: 1px solid black;       */
+        }
+        li{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            /* justify-content: space-between; */
+        }
+        a{
+            color:#786f61 ;
+            text-decoration: none;
+            font-family: sans-serif;
+            font-size: 100 clamp(1.5rem, 6vw, 4.5rem);
+            align-items: center;
+        }
+        #page{
+            font-size: 18px;
+            text-decoration: underline;
+        }
+        header{
+            background-color:#f4ecdf;
+            padding:56px 20px 36px;
+            text-align:center;
+            border:1px solid #dfd2bf;
+        }
+        .Fruit{
+            text-transform:capitalize;    
+            letter-spacing:.24em;        
+            font-size:.80rem;
+            font-weight:700
+        }
+        h1{
+            font:500 clamp(2.5rem,7vw,4.5rem) 'Playfair Display',serif;
+            margin:12px 0 8px;
+            color: #302b1e;
+        }
+        header p{
+            color: #302b1e;
+            max-width:620px;
+            margin:0 auto;
+            line-height:1.7;
+            color:#b18b4d;   
+        }
+        #nav2{
+            position:sticky;
+            top:0;
+            z-index:10;;
+            padding:15px;
+            display:flex;
+            gap:12px;
+            justify-content:center;
+            border-bottom: 1px solid#dfd2bf;
+            flex-wrap:wrap;
+        }
+        #nav2 a{
+            color:#80602e ;
+            text-decoration:none;
+            font-size:.85rem;
+            font-weight:700;
+            padding:9px 13px;
+            font-family: sans-serif;
+        }
+        #nav1 a:hover{
+            font-size: 15px;
+        }
+        #nav2 a:hover{
+            font-size: 15px;
+            background-color:#dfd2bf ;
+        }
+        p{
+            margin-top: 30px;
+        }
+        img{
+            width: 100%;
+            background-size: cover;
+        }
+        .photo{
+            background-color:#302b1e;
+            padding:40px 15px 30px;
+        }
+        .photo p{
+            margin-left: 50px;
+            color: white;
+            padding: 0%;
+            margin:25px;
+        }
+        .photo #first{
+            font:500 clamp(2.5rem,7vw,4.5rem) 'Playfair Display',serif;
+            padding: 0%;     
+        }
+        /* .text{
+            text-align: center;
+            background-color: #fcf9f2;
+            border-bottom: 1px #dfd2bf;
+        }
+        .name{
+            margin-left: 50px;
+            margin-top: 10px;
+            color: #80602e;
+        }
+        strong{
+            font-size: 25px;
+            font-family:'Times New Roman', Times, serif;
+        }
+        .name p{
+            margin: 0%;
+            padding: 0%;
+        }
+        .slogan {
+            padding: 0%;
+            margin: 0%;
+        
+        } */
+         
+        .text,.slogan{
+            /* background-color: #fcf9f2; */
+            border-bottom: 1px #dfd2bf;
+            text-align: left;
+            margin: 37px;
+        }
+        strong{
+            font-size: 25px;
+            font-family:'Times New Roman', Times, serif;
+        }
+        #text,.name p{
+            margin-top: 10px;
+        }
+        .slogan p{
+            padding: 10%;
+        }
+        .list { width: 100%;}
+        .list p{text-align: center;}
+        .menu{
+            padding: 15px;
+            width: 80%;
+            background-color:#fcf9f2 ;
+            margin: auto;
+        }        
+        .list-box {
+            background-color: #fcf9f2; 
+            padding: 15px; 
+            display: flex; 
+            justify-content: space-between;}
+
+        .list-box .items{ 
+            width: 48%; 
+            padding: 10px; 
+            background-color:rgb(248, 239, 228);
+            border-radius: 30px;}
+        .items-title { 
+            font-weight: bold; 
+            color: rgb(128, 4, 4); 
+            padding: 10px;
+            font-size:20px; 
+            font-family: sans-serif;
+        }
+        .item-box { padding: 10px;}
+        .item-table { width: 100%; border: none;}
+        .item-table tr td {border-bottom: 1px solid #941515; padding: 10px;}
+        .item-table tr td:nth-child(2) {text-align: right;}
+        .bottom-text { padding: 10px 0 10px 0; font-size: 80%;}
+        fieldset { border: none; border-top: 1px solid #941515;
+        }
+        fieldset legend {
+            font-family: 'Cormorant Garamond', serif; 
+            font-size: 38px;
+            font-style: italic;
+            color:#500303;
+        }
+        .logo{
+            height: 100%;
+            width: 8%;
+        }
+    </style>
+</head>
+<body>     
+    <div class="nav">
+            <div class="logo">
+                <img src="Assets/images/favicon.png" alt="" height="100%" width="100%">
+            </div>
+            <nav id="nav1">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="service.html" class="active">Services</a></li>
+                    <li><a href="catalogue.html">Catalogue</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+    </div>
+    <header>
+        <div class="Fruit">The Beauty & Care Collection</div>
+        <h1>Our Service Menu</h1>
+        <p>A thoughtful menu of beauty, hair and wellness services. Choose your ritual and let us take care of the details.</p>
+    </header>
+    <div class="sale">
+        <img src="Assets/images/Navnidhi Saloon Festive Beauty Collection.png" alt="">
+    </div>
+    <nav id="nav2">    
+        <a href="#threading">Threading</a>
+        <a href="#wax">Waxing</a>
+        <a href="#facial">Facials</a>
+        <a href="#nails">Nails</a>
+        <a href="#hairs">Hairs</a>
+        <a href="#body">Body & Spa</a>
+        <a href="#makeup">Makeup</a>
+    </nav>
+  <div class="list">
+      <p class="intro">Explore our services and listed prices below. For bridal bookings, packages, hair length-based services or personalised recommendations, please contact the salon.</p>
+      <div class="menu">
+        <fieldset id="threading">
+            <legend>Threading</legend>
+            <div class="list-box">
+                <div class="items">
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Upperlip</td><td>₹20</td></tr>
+                            <tr><td>Forehead</td><td>₹20</td></tr>
+                            <tr><td>Eyebrow</td><td>₹50</td></tr>
+                            <tr><td>All Three (3)</td><td>₹80</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+      </div>
+      <div class="menu">
+        <fieldset id="wax">
+            <legend>Body Wax</legend>
+            <div class="list-box">
+                <div class="items">
+                    <div class="items-title">Honey</div>
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Underarms</td><td>₹50</td></tr>
+                            <tr><td>Hands</td><td>₹200</td></tr>
+                            <tr><td>Legs</td><td>₹400</td></tr>
+                            <tr><td>Back</td><td>₹400</td></tr>
+                            <tr><td>Tummy</td><td>₹400</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="items-title">Chocolate / Alovera</div>
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Underarms</td><td>₹100</td></tr>
+                            <tr><td>Hands</td><td>₹250</td></tr>
+                            <tr><td>Legs</td><td>₹500</td></tr>
+                            <tr><td>Back</td><td>₹500</td></tr>
+                            <tr><td>Tummy</td><td>₹500</td></tr>
+                            <tr><td>Bikini</td><td>₹800</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="list-box">
+                <div class="items">
+                    <div class="items-title">Rica</div>
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Underarms</td><td>₹200</td></tr>
+                            <tr><td>Hands</td><td>₹400</td></tr>
+                            <tr><td>Legs</td><td>₹800</td></tr>
+                            <tr><td>Back</td><td>₹800</td></tr>
+                            <tr><td>Tummy</td><td>₹800</td></tr>
+                            <tr><td>Bikini</td><td>₹1000</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="items-title">White Chocolate</div>
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Underarms</td><td>₹100</td></tr>
+                            <tr><td>Hands</td><td>₹300</td></tr>
+                            <tr><td>Legs</td><td>₹600</td></tr>
+                            <tr><td>Back</td><td>₹600</td></tr>
+                            <tr><td>Tummy</td><td>₹900</td></tr>
+                            <tr><td>Bikini</td><td>₹1200</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="list-box">
+                <div class="items">
+                    <div class="items-title">Roll-On</div>
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Underarms</td><td>₹200</td></tr>
+                            <tr><td>Hands</td><td>₹450</td></tr>
+                            <tr><td>Legs</td><td>₹900</td></tr>
+                            <tr><td>Back</td><td>₹900</td></tr>
+                            <tr><td>Tummy</td><td>₹900</td></tr>
+                            <tr><td>Bikini</td><td>₹1200</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="items-title">Brazeline</div>
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Underarms</td><td>₹300</td></tr>
+                            <tr><td>Face</td><td>₹400</td></tr>
+                            <tr><td>Bikini</td><td>₹1500</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Clean-Up</legend>
+            <div class="list-box">
+                <div class="items">
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Astaberry Wine</td><td>₹750</td></tr>
+                            <tr><td>Vitamin C Aasthaberry</td><td>₹750</td></tr>
+                            <tr><td>Neem Braami</td><td>₹600</td></tr>
+                            <tr><td>On Glow</td><td>₹600</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Normal Fruit</td><td>₹400</td></tr>
+                            <tr><td>VLCC</td><td>₹500</td></tr>
+                            <tr><td>Lotus</td><td>₹500</td></tr>
+                            <tr><td>Alovera</td><td>₹750</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset id="facial">
+            <legend>Facials</legend>
+            <div class="list-box">
+                <div class="items">
+                    <div class="items-title">Classic</div>
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Normal Fruit</td><td>₹800</td></tr>
+                            <tr><td>Original Fruit</td><td>₹1500</td></tr>
+                            <tr><td>VLCC</td><td>₹1000</td></tr>
+                            <tr><td>Lotus</td><td>₹1000</td></tr>
+                            <tr><td>Chocolate</td><td>₹1000</td></tr>
+                            <tr><td>O3</td><td>₹2500</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="items-title">FYC(For Sensitive + Acne-Prone Skin)</div>
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Alovera</td><td>₹1500</td></tr>
+                            <tr><td>Green-Tea</td><td>₹1500</td></tr>
+                            <tr><td>Lemon</td><td>₹1500</td></tr>
+                            <tr><td>Vitamin C</td><td>₹1500</td></tr>
+                            <tr><td>FYC (Vitamin C)</td><td>₹2000</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="list-box">
+                <div class="items">
+                    <div class="items-title">Vedic Line</div>
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>On Glow</td><td>₹1200</td></tr>
+                            <tr><td>Derma</td><td>₹1500</td></tr>
+                            <tr><td>Vitamin C</td><td>₹1200</td></tr>
+                            <tr><td>Argon Oil</td><td>₹1200</td></tr>
+                            <tr><td>Neem & Brame</td><td>₹1200</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="items-title">Kanpeki</div>
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Pro Hydra</td><td>₹4000</td></tr>
+                            <tr><td>Ash Pumpkin</td><td>₹1500</td></tr>
+                            <tr><td>Avocado Glow & Shine</td><td>₹2000</td></tr>
+                            <tr><td>Green Coconut</td><td>₹1500</td></tr>
+                            <tr><td>Raw Mango</td><td>₹1500</td></tr>
+                            <tr><td>Wild Pomogranate</td><td>₹2000</td></tr>
+                            <tr><td>Bridal Bright</td><td>₹5000</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="list-box">
+                <div class="items">
+                    <div class="items-title">Blossom Kochar</div>
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Diamond</td><td>₹1500</td></tr>
+                            <tr><td>Silver</td><td>₹1500</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="items-title">Skin Tightening</div>
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Thermoh</td><td>₹1500</td></tr>
+                            <tr><td>FYC</td><td>₹1500</td></tr>
+                            <tr><td>Vedic Line</td><td>₹1500</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="list-box">
+                <div class="items">
+                    <div class="items-title">Astaberry</div>
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Astaberry Wine</td><td>₹1500</td></tr>
+                            <tr><td>Astaberry Vitamin C</td><td>₹1500</td></tr>
+                            <tr><td>Wine + Astaberry</td><td>₹3000</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset id="body">
+            <legend>Massage</legend>
+            <div class="list-box">
+                <div class="items">
+                   <div class="items-title">Body Massage</div> 
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Fruit Cream</td><td>₹1200</td></tr>
+                            <tr><td>Olive Oil</td><td>₹2000</td></tr>
+                            <tr><td>Coconut Oil</td><td>₹1500</td></tr>
+                            <tr><td>Body Polishing</td><td>₹3000</td></tr>
+                            <tr><td>Stone Polishing</td><td>₹4500</td></tr>
+                        </table>
+                    </div>  
+                </div>
+                <div class="items">
+                    <div class="items-title">Head Massage</div>
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Ayurvedic Oil</td><td>₹400</td></tr>
+                            <tr><td>Coconut Oil</td><td>₹400</td></tr>
+                            <tr><td>Olive Oil</td><td>₹500</td></tr>
+                            <tr><td>Egg Oil</td><td>₹500</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Manicure, Pedicure & Bleach</legend>
+            <div class="list-box">
+                <div class="items">
+                    <div class="items-title">Manicure</div> 
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Normal (Fruit)</td><td>₹600</td></tr>
+                            <tr><td>Spa (Lotus)</td><td>₹1000</td></tr>
+                        </table>
+                    </div>  
+                </div>
+                <div class="items">
+                    <div class="items-title">Pedicure</div>
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Normal (Fruit)</td><td>₹600</td></tr>
+                            <tr><td>Spa (Lotus)</td><td>₹1000</td></tr>
+                            <tr><td>Heel Peel</td><td>₹1500</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="list-box">
+                <div class="items">
+                    <div class="items-title">Bleach</div> 
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Face</td><td>₹200</td></tr>
+                            <tr><td>Hands</td><td>₹300</td></tr>
+                            <tr><td>Back</td><td>₹400</td></tr>
+                            <tr><td>Tummy</td><td>₹400</td></tr>
+                            <tr><td>Legs</td><td>₹500</td></tr>
+                            <tr><td>Full Body Bleach</td><td>₹1500</td></tr>
+                        </table>
+                    </div>  
+                </div>
+            </div>
+        </fieldset>
+         <fieldset id="hairs">
+            <legend>Hairs</legend>
+            <div class="list-box">
+                <div class="items"> 
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Wash</td><td>₹200</td></tr>
+                            <tr><td>Blowdry</td><td>₹200</td></tr>
+                            <tr><td>Wash + Blowdry</td><td>₹350</td></tr>
+                            <tr><td>Line Haircut</td><td>₹400</td></tr>
+                            <tr><td>Curtain Bangs</td><td>₹100</td></tr>
+                            <tr><td>Butterfly Cut</td><td>₹450</td></tr>
+                        </table>
+                    </div>  
+                </div>
+                <div class="items">
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Advance Cut</td><td>₹600</td></tr>
+                            <tr><td>Layered Hair</td><td>₹450</td></tr>
+                            <tr><td>Feather</td><td>₹450</td></tr>
+                            <tr><td>Wolf Cut</td><td>₹450</td></tr>
+                            <tr><td>Medium Blunt Cut</td><td>₹450</td></tr>
+                            <tr><td>Baby Cut</td><td>₹200</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="list-box">
+                <div class="items">
+                    <div class="items-title">Curls</div> 
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Maggie Curls</td></tr>
+                            <tr><td>Beach Waves</td></tr>
+                            <tr><td>Curls</td></tr>
+                        </table>
+                        <div class="bottom-text">NOTE : Prices are according to the length of the hairs.</div>
+                    </div>  
+                </div>
+                <div class="items">
+                    <div class="items-title">Straights</div>
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Shoulder Lenght</td><td>₹400</td></tr>
+                            <tr><td>Below Shoulder</td><td>₹600</td></tr>
+                            <tr><td>Below Waist</td><td>₹800</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="list-box">
+                <div class="items">
+                    <div class="items-title">Hair Styling</div> 
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Basic Bun</td><td>₹300</td></tr>
+                            <tr><td>Flower Bun</td><td>₹1000</td></tr>
+                            <tr><td>Messy Bun</td><td>₹600</td></tr>
+                            <tr><td>Open Hairstyle</td><td>₹800</td></tr>
+                            <tr><td>Advance Hairstyle (With Extension)</td><td>₹1500</td></tr>
+                            <tr><td>Basic accessories add on</td><td>₹300 per piece</td></tr>
+                        </table>
+                    </div>  
+                </div>
+                <div class="items">
+                    <div class="items-title">Hair Spa</div>
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Loreal</td><td>₹1500</td></tr>
+                            <tr><td>Schwarzkof</td><td>₹2000</td></tr>
+                            <tr><td>Keratine, Deep Conditioning & Protien Capsule</td><td>₹2500</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="list-box">
+                <div class="items">
+                    <div class="items-title">Chemical Work</div> 
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Keratine</td><td>₹6000</td></tr>
+                            <tr><td>Kerashine</td><td>₹10000</td></tr>
+                            <tr><td>Botox</td><td>₹6000</td></tr>
+                            <tr><td>Smoothening</td><td>₹8000</td></tr>
+                        </table>
+                    </div>  
+                </div>
+            </div>
+        </fieldset>
+        
+        <fieldset id="nails">
+            <legend>Nails Care</legend>
+            <div class="list-box">
+                <div class="items">
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Gail Nailpaint</td><td>₹800</td></tr>
+                            <tr><td>Temp Extension</td><td>₹1000</td></tr>
+                            <tr><td>Gel Overlay</td><td>₹1500</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Acrylic</td><td>₹2500</td></tr>
+                            <tr><td>Inbuild Acrylic</td><td>₹2000</td></tr>
+                            <tr><td>Inbuild Acrylic</td><td>₹3000</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="list-box">
+                <div class="items">
+                    <div class="item-box">
+                         <div class="items-title">Add On</div>
+                        <table class="item-table">
+                            <tr><td>French</td><td>₹50</td></tr>
+                            <tr><td>Stone (Per finger)</td><td>₹50</td></tr>
+                            <tr><td>Miler (Per finger)</td><td>₹50</td></tr>
+                            <tr><td>Glitter</td><td>₹50</td></tr>
+                            <tr><td>Cat Eye</td><td>₹50</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Chrome</td><td>₹50</td></tr>
+                            <tr><td>Foils</td><td>₹50</td></tr>
+                            <tr><td>Ombree</td><td>₹100</td></tr>
+                            <tr><td>Glitter Nailcolor</td><td>₹50</td></tr>
+                            <tr><td>Brush Art</td><td>₹100</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset id="makeup">
+            <legend>Makeup & Draping</legend>
+            <div class="list-box">
+                <div class="items">
+                    <div class="items-title">Normal Makeup</div>
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Basic Makeup</td><td>₹1500</td></tr>
+                            <tr><td>HD Makeup</td><td>₹2500</td></tr>
+                            <tr><td>Airbrush Party Makeup</td><td>₹3500</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="items-title">Wedding Day</div>
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Hair & Makeup</td><td>₹18000</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="list-box">
+                <div class="items">
+                    <div class="items-title">Airbrush Occasional Makeup</div>
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Roka</td><td>₹4000</td></tr>
+                            <tr><td>Reception</td><td>₹12000</td></tr>
+                            <tr><td>Sangeet</td><td>₹12000</td></tr>
+                            <tr><td>Engagement</td><td>₹8000</td></tr>
+                            <tr><td>Haldi</td><td>₹6000</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="items-title">HD Occasional Makeup</div>
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Roka</td><td>₹3000</td></tr>
+                            <tr><td>Reception</td><td>₹10000</td></tr>
+                            <tr><td>Sangeet</td><td>₹10000</td></tr>
+                            <tr><td>Engagement</td><td>₹6000</td></tr>
+                            <tr><td>Haldi</td><td>₹4000</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="list-box">
+                <div class="items">
+                    <div class="items-title">Draping</div>
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Lehenga</td><td>₹150</td></tr>
+                            <tr><td>Saari</td><td>₹300</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="items-title">Brides Maid & Others</div>
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Hair & Makeup</td><td>₹2500</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="list-box">
+                <div class="items">
+                    <div class="items-title">Wedding Trial</div>
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Hair</td><td>₹600-₹1000</td></tr>
+                            <tr><td>Makeup</td><td>₹2000</td></tr>
+                            <tr><td>Hair & Makeup</td><td>₹2500</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Body Package</legend>
+            <div class="list-box">
+                <div class="items">
+                    <div class="items-title">₹15000</div>
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Body Bleach</td><td>Shearal</td></tr>
+                            <tr><td>Waxing</td><td>Gel/Rica</td></tr>
+                            <tr><td>Meni-Pedi</td><td>Spa</td></tr>
+                            <tr><td>Massage</td><td>Stone Spa Polishing</td></tr>
+                            <tr><td>Facial</td><td>O3+Vitamin C</td></tr>
+                            <tr><td>Haircut, Hairspa</td><td>Schwarzkof</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="items-title">₹7000</div>
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Body Bleach</td><td>Diamond</td></tr>
+                            <tr><td>Waxing</td><td>Chocolate/Aloevera</td></tr>
+                            <tr><td>Meni-Pedi</td><td>Fruit</td></tr>
+                            <tr><td>Massage</td><td>Coconut Oil</td></tr>
+                            <tr><td>Clean-up, Facial</td><td>Acc. to Skin</td></tr>
+                            <tr><td>Haircut</td></tr>
+                            <tr><td>Threading(All 3)</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="list-box">
+                <div class="items">
+                    <div class="items-title">₹10000</div>
+                    <div class="item-box">
+                        <table class="item-table">
+                            <tr><td>Body Bleach</td><td>Silver/Platinum</td></tr>
+                            <tr><td>Waxing</td><td>Rica</td></tr>
+                            <tr><td>Meni-Pedi</td><td>Spa</td></tr>
+                            <tr><td>Massage</td><td>Body Spa Polishing</td></tr>
+                            <tr><td>Clean-up, Facial</td><td>Pomogranate</td></tr>
+                            <tr><td>Haircut, Hairspa</td><td>Loreal</td></tr>
+                            <tr><td>Facial</td><td>O3</td></tr>
+                            <tr><td>Threading(All 3)</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+      </div>
+  </div>
+  <footer>
+    <div class="photo">
+        <p id="first">Your next beautiful moment awaits.</p>
+        <p>A fresh look. A little self-care. A celebration of you</p>
+    </div>
+    <div class="text">
+        <div class="name">
+            <strong>ESTHEVA</strong>
+            <p>BY NAVNIDHI</p>
+        </div>
+        <div class="slogan"></div>
+            <p>Nine treasures. One beautiful you.</p>
+            <p> Beauty, hair and wellness — thoughtfully curated for you.</p>
+        </div>    
+    </div>
+  </footer>
+</body>
+</html>

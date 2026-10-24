@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="Assets/images/favicon.png" type="image/x-icon">
+    <style>
+        :root {
+            --ivory: #fcf9f2;
+            --cream: #f4ecdf;
+            --cream-deep: #eee2d0;
+            --ink: #302b1e;
+            --muted: #786f61;
+            --gold: #80602e;
+            --gold-light: #b18b4d;
+            --line: #dfd2bf;
+            --serif: "Playfair Display", Georgia, serif;
+            --sans: "DM Sans", Arial, sans-serif;
+        }        
+        *{
+            box-sizing:border-box
+        }
+        html{
+            scroll-behavior:smooth
+        }
+        body{
+            margin:0;
+            background:#fcf9f2;
+            font-family:'DM Sans',sans-serif
+        }
+        .logo{
+            height: 100%;
+            width: 8%;
+        }
+        .nav{
+            background-color: #FEFCF7;
+            height:60px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border: 1px solid grey; */
+        }
+        #nav1{
+            height: 100%;
+            width: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        ul{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;           
+        }
+        li{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+        }
+        a{
+            color:#786f61 ;
+            text-decoration: none;
+            font-family: sans-serif;
+            font-size: 100 clamp(1.5rem, 6vw, 4.5rem);
+            align-items: center;
+        }
+        header{
+            background-color:#f4ecdf;
+            padding:56px 20px 36px;
+            text-align:center;
+            border:1px solid #dfd2bf;
+        }
+        .eyebrow{uppercase;
+            letter-spacing:.24em;
+            color:#b18b4d;
+            font-size:.80rem;
+            font-weight:700
+        }
+        h1{
+            font:500 clamp(2.5rem,7vw,4.5rem) 'Playfair Display',serif;
+            margin:12px 0 8px;
+            color: #302b1e;
+        }
+        header p{
+            max-width:620px;
+            margin:0 auto;
+            line-height:1.7;
+            color:#b18b4d;   
+        }
+        #nav2{
+            position:sticky;
+            top:0;
+            z-index:10;;
+            padding:15px;
+            display:flex;
+            gap:12px;
+            justify-content:center;
+            border-bottom: 1px solid#dfd2bf;
+            flex-wrap:wrap;
+        }
+        #nav2 a{
+            color:#80602e ;
+            text-decoration:none;
+            font-size:.90rem;
+            font-weight:700;
+            padding:9px 60px;
+            font-family: sans-serif;
+        }
+        #nav1 a:hover{
+            font-size: 15px;
+        }
+        #nav2 a:hover{
+            font-size: 15px;
+            background-color:#dfd2bf ;
+        }
+         .foot{
+            padding:50px 15px 30px;
+            background-color: #302b1e;
+            color: white;
+         }
+        .foot p{
+            /* background-color:#302b1e; */
+            padding:40px 15px 30px;
+            margin-left: 50px;
+            color: white;
+            padding: 0%;
+            margin:25px;
+        }
+        #first{
+            font:500 clamp(2.5rem,7vw,4.5rem) 'Playfair Display',serif;
+            padding: 0%;     
+         }
+        .text,.slogan{
+            /* background-color: #fcf9f2; */
+            border-bottom: 1px #dfd2bf;
+            text-align: left;
+            margin: 35px;
+        }
+        strong{
+            font-size: 25px;
+            font-family:'Times New Roman', Times, serif;
+        }
+        #text,.name p{
+            margin-top: 10px;
+        }
+        .box{
+            width: 90%;
+            height:auto;
+            /* border: 1px solid black; */
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0,1fr));
+            gap: 20px;
+            padding: 0 20px 30px;
+            margin: 0 auto;
+        }
+        .card{
+            border-radius: 20px;
+            height: 530px;
+            width: 90%;
+            background-color:#eee2d0;
+            /* border: 1px solid blue; */
+        }
+        .b{
+            height: 85%;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        @media (max-width: 576px) {
+            .box {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 12px;
+                padding: 0 12px 20px;
+            }
+
+            .card {
+                height: 250px;
+            }
+        }
+        .b1{
+            background-image: url(Assets/images/makeup1.png);
+        }
+        .b2{
+            background-image: url(Assets/images/makeup2.png);
+        }
+        .b3{
+            background-image:url(Assets/images/makeup3.png);
+        }
+        .b4{
+            background-image: url(Assets/images/makeup4.png);
+        }
+        .b5{
+            background-image: url(Assets/images/makeup5.png);
+        }
+        .b6{
+            background-image: url(Assets/images/makeup6.png);
+        }
+        .b7{
+            background-image: url(Assets/images/makeup7.png);
+        }
+        .b8{
+            background-image: url(Assets/images/makeup8.png);
+        }
+        .b9{
+            background-image: url(Assets/images/makeup9.png);
+        }
+        .b10{
+            background-image: url(Assets/images/makeup10.png);
+        }
+        .b11{
+            background-image: url(Assets/images/makeup11.png);
+        }
+        .b12{
+            background-image: url(Assets/images/makeup12.png);
+        }
+        .b13{
+            background-image: url(Assets/images/makeup13.png);
+        }
+        .b14{
+            background-image: url(Assets/images/makeup14.png);
+        }
+        .b15{
+            background-image: url(Assets/images/hairs.png);
+        }
+        .b16{
+            background-image: url(Assets/images/hairs1.png);
+        }
+        .b16{
+            background-image: url(Assets/images/hairs2.png);
+        }
+        .b17{
+            background-image: url(Assets/images/hairs3.png);
+        }
+        .b18{
+            background-image: url(Assets/images/nails.png);
+        }
+        .b19{
+            background-image: url(Assets/images/nails1.png);
+        }
+        .b20{
+            background-image: url(Assets/images/nails2.png);
+        }
+        .b21{
+            background-image: url(Assets/images/nails3.png);
+        }
+        .b22{
+            background-image: url(Assets/images/nails4.png);
+        }
+        .b23{
+            background-image: url(Assets/images/nails5.png);
+        }
+        .b24{
+            background-image: url(Assets/images/nails6.png);
+        }
+        .b25{
+            background-image: url(Assets/images/nails7.png);
+        }
+        .b26{
+            background-image: url(Assets/images/nails8.png);
+        }
+        h2{
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 38px;
+            font-style: italic;
+            color:#500303;
+            margin-left:52px;
+            padding: 0%;
+        }
+        h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            font-weight:bold;
+            line-height: 1.5;
+            color: rgb(128, 4, 4);
+            margin-left:15px;
+            margin-top: 0%;
+        }
+        .sub p {
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 300;
+            color:#b18b4d;
+            /* pad: 10px 10px 10px 10px; */
+            margin-top: 10px;
+            margin-left: 18px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+            <div class="logo">
+                <img src="Assets/images/favicon.png" alt="Navnidhi Salon" height="100%" width="100%">
+            </div>
+            <nav id="nav1">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="service.html" >Services</a></li>
+                    <li><a href="catalogue.html" id="page">Catalogue</a></li>
+                    <li><a href="contact2.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <header>
+             <div class="head">-The Estheva Lookbook</div>
+                <h1>A Little Inspiration. Endless possibilities.</h1>
+                <p> Find a look that speaks to you. We’ll make it your own.</p>
+        </header>
+        <nav aria-label="Service categories" id="nav2">
+            <a href="">All Looks</a>
+            <a href="">Hairs</a>
+            <a href="">Makeup</a>
+            <a href="">Nails & Grooming</a>
+        </nav>
+      <h2>Explore Our Looks.</h2>
+        
+    <div class="box">
+        <div class="card">
+            <div class="b b1"></div>
+            <div class="sub">
+                <p>Coctail Special</p>
+                <h3>Midnight shimmer, rose elegance</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="b b2"></div>
+            <div class="sub">
+                <p>Bridal Elegance</p>
+                <h3>Plum silk, golden allure</h3>
+            </div>
+        </div>
+        <div class="card">
+             <div class="b b3"></div>
+             <div class="sub">
+                <p>Party Look</p>
+                <h3>Emerald sparkle, modern muse</h3>
+             </div>
+        </div>
+        <div class="card">
+            <div class="b b4"></div>
+            <div class="sub">
+                <p>Effortless Beauty</p>
+                <h3>Berry bright, bridal bold</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="b b5"></div>
+            <div class="sub">
+                <p>Marathi Glamour</p>
+                <h3>Crimson blooms, golden grace</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="b b6"></div>
+            <div class="sub">
+                <p>Dandiya Special</p>
+                <h3>Navratri in lilac shimmer</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="b b7"></div>
+            <div class="sub">
+                <p>Etheral Muslim Grace</p>
+                <h3>Ivory veil, soft glam</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="b b8"></div>
+            <div class="sub">
+                <p>Bachelorette Glamour</p>
+                <h3>Midnight smokey, sultry glam</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="b b9"></div>
+            <div class="sub">
+                <p>Royal Radiance</p>
+                <h3>Maroon velvet, gajra grace</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="b b10"></div>
+            <div class="sub">
+                <p>Peach Elegance</p>
+                <h3>Peach tulle, reception glow</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="b b11"></div>
+            <div class="sub">
+                <p>Midnight Glam</p>
+                <h3>Navy shimmer, jewel lighting</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="b b12"></div>
+            <div class="sub">
+                <p>Lotus Bride</p>
+                <h3>Blush shimmer, pearl perfection</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="b b13"></div>
+            <div class="sub">
+                <p>Crimson Royalty</p>
+                <h3>Classic Crimson</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="b b14"></div>
+            <div class="sub">
+                <p>Etheral Grace</p>
+                <h3>Fuchsia dupatta, golden hour</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="b b15"></div>
+            <div class="sub">
+                <p>effortless flow</p>
+                <h3>Curtain bangs, bouncy blowout</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="b b16"></div>
+            <div class="sub">
+                <p>Curly Hairstyle</p>
+                <h3>Soft waves, effortless grace</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="b b17"></div>
+            <div class="sub">
+                <p>WaveWhisper</p>
+                <h3>Soft waves, effortless grace</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="b b18"></div>
+            <div class="sub">
+                <p>Navratri Special</p>
+                <h3>Crimson charms, jeweled tips</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="b b19"></div>
+            <div class="sub">
+                <p>Royal Blue</p>
+                <h3>Cobalt blue, royal artistry</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="b b20"></div>
+            <div class="sub">
+                <p>3-D Glam</p>
+                <h3>Champagne shimmer, golden luxe</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="b b21"></div>
+            <div class="sub">
+                <p>Frosted Elegance</p>
+                <h3>Cobalt French, 3D swirls</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="b b22"></div>
+            <div class="sub">
+                <p>3-D Flower</p>
+                <h3>Champagne fingertips</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="b b23"></div>
+            <div class="sub">
+                <p>French Beauty</p>
+                <h3>Red French, floral accents</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="b b24"></div>
+            <div class="sub">
+                <p>Nude Elegance</p>
+                <h3>Nude sparkle, timeless luxe</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="b b25"></div>
+            <div class="sub">
+                <p>Blush Bloom</p>
+                <h3>Blush petals, golden accents</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="b b26"></div>
+            <div class="sub">
+                <p>Chic Maroon</p>
+                <h3>Cherry gloss, pink swirls</h3>
+            </div>
+        </div>
+        
+    </div>
+        <footer>  
+            <div class="foot">
+                <p id="first">Your next beautiful moment awaits.</p>
+                <p>A fresh look. A little self-care. A celebration of you</p>
+            </div>
+            <div class="text">
+                <div class="name">
+                    <strong>ESTHEVA</strong>
+                    <p>BY NAVNIDHI</p>
+                </div>
+                <div class="slogan"></div>
+                    <p>Nine treasures. One beautiful you.</p>
+                    <p> Beauty, hair and wellness — thoughtfully curated for you.</p>
+                </div>    
+            </div>
+        </footer>
+</body>
+</html>
