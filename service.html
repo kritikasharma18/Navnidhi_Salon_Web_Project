@@ -4,242 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navnidhi Salon</title>
+    <!-- <link rel="shortcut icon" href="Assets/images/favicon.png" type="image/x-icon"> -->
+    <link rel="stylesheet" href="Assets/CSS/new.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" referrerpolicy="no-referrer">
     <link rel="shortcut icon" href="Assets/images/favicon.png" type="image/x-icon">
     <style>
-        *{
-            box-sizing:border-box
-        }
-        html{
-            scroll-behavior:smooth
-        }
-        body{
-            margin:0;
-            background:#fcf9f2;
-            font-family:'DM Sans',sans-serif
-        }
-        .nav{
-            background-color: #FEFCF7;
-            height:60px;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            /* border: 1px solid grey; */
-        }
-        #nav1{
-            height: 100%;
-            width: 60%;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            /* border: 1px solid black; */
-        }
-        ul{
-            height: 100%;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;     
-            /* border: 1px solid black;       */
-        }
-        li{
-            height: 100%;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            list-style-type: none;
-            /* justify-content: space-between; */
-        }
-        a{
-            color:#786f61 ;
-            text-decoration: none;
-            font-family: sans-serif;
-            font-size: 100 clamp(1.5rem, 6vw, 4.5rem);
-            align-items: center;
-        }
-        #page{
-            font-size: 18px;
-            text-decoration: underline;
-        }
-        header{
-            background-color:#f4ecdf;
-            padding:56px 20px 36px;
-            text-align:center;
-            border:1px solid #dfd2bf;
-        }
-        .Fruit{
-            text-transform:capitalize;    
-            letter-spacing:.24em;        
-            font-size:.80rem;
-            font-weight:700
-        }
-        h1{
-            font:500 clamp(2.5rem,7vw,4.5rem) 'Playfair Display',serif;
-            margin:12px 0 8px;
-            color: #302b1e;
-        }
-        header p{
-            color: #302b1e;
-            max-width:620px;
-            margin:0 auto;
-            line-height:1.7;
-            color:#b18b4d;   
-        }
-        #nav2{
-            position:sticky;
-            top:0;
-            z-index:10;;
-            padding:15px;
-            display:flex;
-            gap:12px;
-            justify-content:center;
-            border-bottom: 1px solid#dfd2bf;
-            flex-wrap:wrap;
-        }
-        #nav2 a{
-            color:#80602e ;
-            text-decoration:none;
-            font-size:.85rem;
-            font-weight:700;
-            padding:9px 13px;
-            font-family: sans-serif;
-        }
-        #nav1 a:hover{
-            font-size: 15px;
-        }
-        #nav2 a:hover{
-            font-size: 15px;
-            background-color:#dfd2bf ;
-        }
-        p{
-            margin-top: 30px;
-        }
-        img{
-            width: 100%;
-            background-size: cover;
-        }
-        .photo{
-            background-color:#302b1e;
-            padding:40px 15px 30px;
-        }
-        .photo p{
-            margin-left: 50px;
-            color: white;
-            padding: 0%;
-            margin:25px;
-        }
-        .photo #first{
-            font:500 clamp(2.5rem,7vw,4.5rem) 'Playfair Display',serif;
-            padding: 0%;     
-        }
-        /* .text{
-            text-align: center;
-            background-color: #fcf9f2;
-            border-bottom: 1px #dfd2bf;
-        }
-        .name{
-            margin-left: 50px;
-            margin-top: 10px;
-            color: #80602e;
-        }
-        strong{
-            font-size: 25px;
-            font-family:'Times New Roman', Times, serif;
-        }
-        .name p{
-            margin: 0%;
-            padding: 0%;
-        }
-        .slogan {
-            padding: 0%;
-            margin: 0%;
+        .sale {width: 100%; background-color: #fde;}
+        .sale img { width: 100%; height: 100%;}
+        .sale img.image1 { content: url('assets/images/poster2.png');}
         
-        } */
-         
-        .text,.slogan{
-            /* background-color: #fcf9f2; */
-            border-bottom: 1px #dfd2bf;
-            text-align: left;
-            margin: 37px;
-        }
-        strong{
-            font-size: 25px;
-            font-family:'Times New Roman', Times, serif;
-        }
-        #text,.name p{
-            margin-top: 10px;
-        }
-        .slogan p{
-            padding: 10%;
-        }
-        .list { width: 100%;}
-        .list p{text-align: center;}
-        .menu{
-            padding: 15px;
-            width: 80%;
-            background-color:#fcf9f2 ;
-            margin: auto;
-        }        
-        .list-box {
-            background-color: #fcf9f2; 
-            padding: 15px; 
-            display: flex; 
-            justify-content: space-between;}
+        .poster {
+  object-fit: cover;
+  /* Runs a 6-second loop forever */
+  animation: swapImage 6s infinite; 
+}
 
-        .list-box .items{ 
-            width: 48%; 
-            padding: 10px; 
-            background-color:rgb(248, 239, 228);
-            border-radius: 30px;}
-        .items-title { 
-            font-weight: bold; 
-            color: rgb(128, 4, 4); 
-            padding: 10px;
-            font-size:20px; 
-            font-family: sans-serif;
-        }
-        .item-box { padding: 10px;}
-        .item-table { width: 100%; border: none;}
-        .item-table tr td {border-bottom: 1px solid #941515; padding: 10px;}
-        .item-table tr td:nth-child(2) {text-align: right;}
-        .bottom-text { padding: 10px 0 10px 0; font-size: 80%;}
-        fieldset { border: none; border-top: 1px solid #941515;
-        }
-        fieldset legend {
-            font-family: 'Cormorant Garamond', serif; 
-            font-size: 38px;
-            font-style: italic;
-            color:#500303;
-        }
-        .logo{
-            height: 100%;
-            width: 8%;
-        }
+@keyframes swapImage {
+  0%, 25% {
+    content: url('assets/images/poster-1.png');
+  }
+  25%, 50% {
+    content: url('assets/images/poster2.png');
+  }
+  50%, 75% {
+    content: url('assets/images/poster3.png');
+  }
+  75%, 100% {
+    content: url('assets/images/poster-1.png');
+  }
+}
     </style>
 </head>
 <body>     
-    <div class="nav">
+    <div class="nav-con">
             <div class="logo">
-                <img src="Assets/images/favicon.png" alt="" height="100%" width="100%">
+                <img src="Assets/images/favicon.png" alt="">
             </div>
             <nav id="nav1">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="service.html" class="active">Services</a></li>
+                    <li><a href="service.html" id="active">Services</a></li>
                     <li><a href="catalogue.html">Catalogue</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
     </div>
+    <div class="sale">
+        <img src="Assets/images/poster-1.png" alt="Sales-Poster" class="poster">
+    </div>
     <header>
-        <div class="Fruit">The Beauty & Care Collection</div>
+        <div class="head"><p>The Beauty & Care Collection</p></div>
         <h1>Our Service Menu</h1>
         <p>A thoughtful menu of beauty, hair and wellness services. Choose your ritual and let us take care of the details.</p>
     </header>
-    <div class="sale">
-        <img src="Assets/images/Navnidhi Saloon Festive Beauty Collection.png" alt="">
-    </div>
     <nav id="nav2">    
         <a href="#threading">Threading</a>
         <a href="#wax">Waxing</a>
@@ -806,21 +625,49 @@
         </fieldset>
       </div>
   </div>
-  <footer>
-    <div class="photo">
-        <p id="first">Your next beautiful moment awaits.</p>
-        <p>A fresh look. A little self-care. A celebration of you</p>
-    </div>
-    <div class="text">
-        <div class="name">
-            <strong>ESTHEVA</strong>
-            <p>BY NAVNIDHI</p>
+  <section class="banner">
+        <div class="content">
+            <h1> Your big day deserves
+            <em> the finest</em></h1>
+            <p>A fresh look. A little self-care. A celebration of you</p>
         </div>
-        <div class="slogan"></div>
-            <p>Nine treasures. One beautiful you.</p>
-            <p> Beauty, hair and wellness — thoughtfully curated for you.</p>
-        </div>    
-    </div>
-  </footer>
+     </section>
+     <footer>
+        <div class="foot-con">
+            <div class="salon">
+                <h2>Estheva</h2>
+                <strong>By Navnidhi</strong>
+                <p>Where every look is a treasure.
+                Bridal, makeup and hair artistry
+                crafted with love.</p>
+            </div>
+            <div class="foot-contact">
+                <div class="ad">
+                    <strong>Visit Us</strong>
+                    <p><i class="fa-solid fa-location-dot contact-icon" aria-hidden="true"></i>Opposite B.K. Post Office, Dayanand Colony, Ramnagar, 
+                            Ajmer (305004)</p>
+                </div>
+                <div class="tel">
+                    <i class="fa-regular fa-comment-dots contact-icon" aria-hidden="true"></i>
+                    <a href="tel:+9829709701">+9829709701</a>
+                </div>
+                <div class="insta">
+                    <i class="fa-brands fa-instagram contact-icon" aria-hidden="true"></i>
+                    <a href="https://www.instagram.com/estheva_by_navnidhi?dlrf=MTRibjFxZjZ2Z25veg==" aria-label="instagram">@Estheva_by_Navnidhi</a>
+                </div>
+            </div>
+            <div class="foot-nav">
+                <strong>Explore</strong>
+                <a href="index.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="service.html">SERVICES</a>
+                <a href="catalogue.html">CATALOGUE</a>
+                <a href="contact.html">CONTACT</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 NAVNIDHI SALON</p>
+        </div>
+     </footer>
 </body>
 </html>

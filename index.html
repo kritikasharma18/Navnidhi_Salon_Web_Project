@@ -4,27 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navnidhi Salon</title>
-    <link rel="stylesheet" href="Assets/CSS/style.css">
+    <link rel="stylesheet" href="Assets/CSS/new.css">
+    <!-- <link rel="stylesheet" href="Assets/CSS/style.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" referrerpolicy="no-referrer">
     <link rel="shortcut icon" href="Assets/images/favicon.png" type="image/x-icon">
-    <link rel="shortcut icon" href="Assets/images/favicon.png" type="image/x-icon">
+    <style>
+        .gap { padding-left: 40px; padding-right: 40px;}
+    </style>
 </head>
 <body>
-    <header class="main-header">
-        <div class="container nav-container">
-            <div class="brand-logo">
-                <img src="Assets/images/favicon.png" alt="Navnidhi Salon">
+    <div class="nav-con">
+            <div class="logo">
+                <img src="Assets/images/favicon.png" alt="" height="100" width="100">
             </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="active">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="service.html">SERVICES</a></li>
-                    <li><a href="catalogue.html">CATALOGUE</a></li>
-                    <li><a href="contact2.html">CONTACT</a></li>
+            <nav id="nav1">
+                <ul>
+                    <li><a href="index.html" id="active">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="service.html" >Services</a></li>
+                    <li><a href="catalogue.html">Catalogue</a></li>
+                    <li><a href="contact.html" >Contact</a></li>
                 </ul>
             </nav>
-        </div>
-    </header>
+    </div>
     <section class="hero">
             <div class="container hero-container">
                 <div class="hero-text">
@@ -34,11 +36,21 @@
                         Step into a space where care meets craft.From everyday confidence to your once-in-a-lifetime confidence - let your beauty bloom.
                     </p>
                     <div class="hero-buttons">
-                        <a href="services.html" class="btn">Explore our services</a>
+                        <a href="service.html" class="btn">Explore our services</a>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <img src="Assets/images/entrance.png" alt="Navnidhi Salon Luxury Interior">
+                <div class="hero-art">
+                    <div class="frame">
+                        <video src="Assets/video/salon-reel.mp4" poster="Assets/images/hairs1.webp" autoplay muted loop playsinline preload="metadata" aria-label="Stylist setting soft waves in long dark hair"></video>
+                    </div>
+                    <img class="inset" src="Assets/images/makeup10.png" alt="Bride in peach tulle with soft glam makeup">
+                </div>
+            </div>
+            <div class="slide">
+                <!-- <marquee behavior="scroll" direction="right-to-left"> -->
+                <div class="slide-show" style="">
+                    <p>|  Hair Styling <i class="gap">*</i> Skin Care <i class="gap"></i> Nail-art <i class="gap">*</i> Pre-Bridal <i class="gap">*</i> Bridal Makeup <i class="gap">*</i> Party Makeup <i class="gap">*</i> Engagement Look <i class="gap">*</i> Spa <i class="gap">*</i> Massage |</p>
+                <!-- </marquee> -->
                 </div>
             </div>
     </section>
@@ -50,32 +62,93 @@
                 Thoughtful services, tailored to bring out your natural best.
             </p>
             <div class="services-grid">
-                <div class="service-card">
-                    <img src="images/hairstyle.png" alt="Hair Artistry Service">
+                <div class="services-card">
+                    <img src="Assets/images/hair_website.png" alt="Hair Artistry">
                     <h3>Hair Artistry</h3>
                     <p>Beautiful cuts, Thoughtful colour, and hair that feels like you.</p>
-                    <a href="services.html" class="card-link">Discover more</a>
+                     <a href="catalogue.html" class="card-link">Discover more</a>
                 </div>
                 <div class="services-card">
-                    <img src="" alt="Skin & Wellness treatment">
+                    <img src="Assets/images/skin_wellness_website.png" alt="Skin & Wellness treatment">
                     <h3>Skin & Wellness</h3>
                     <p>Restorative rituals for healthy skin and a little inner calm.</p>
-                    <a href="services.html" class="card-link">Discover more</a>
+                    <a href="catalogue.html" class="card-link">Discover more</a>
                 </div>
                 <div class="services-card">
-                    <img src="images/makeup.png" alt="Bridal Makeup & Beauty">
+                    <img src="Assets/images/bridal_makeup_website.png" alt="Bridal Makeup & Beauty">
                     <h3>Bridal & Makeup</h3>
                     <p>Timeless beauty for your most unforgettable moments.</p>
-                    <a href="services.html" class="card-link">Discover more</a>
+                    <a href="catalogue.html" class="card-link">Discover more</a>
                 </div>
                 <div class="services-card">
-                    <img src="images/nails.png" alt="Nails And Grooming">
+                    <img src="Assets/images/nails_website.png" alt="Nails And Grooming">
                     <h3>Nails & Grooming</h3>
                     <p>The little details that make you feel beautifully put together.</p>
-                    <a href="services.html" class="card-link">Discover more</a>
+                    <a href="catalogue.html" class="card-link">Discover more</a>
                 </div>
             </div>
         </div>
     </section>
+     <section class="story">
+        <div class="image">
+            <div class="image1">
+                <img src="Assets/images/navnidhi_about_section_800x610_350x414_under300kb.png" alt="Luxury Salon Interior">
+            </div>
+            <div class="image2">
+                <img src="Assets/images/interior2_350x414_under300kb.png" alt="Asethetic Picturesque Wall">
+            </div>
+        </div>
+        <div class="salon-story">
+            <p id="u">OUR STORY</p>
+            <h2 id="m">Beauty, with a touch of <span>tradition.</span></h2>
+            <p id="d">At Navnidhi, every bride, every guest and every client is treated like family. <br>Our artists blend modern technique with Indian heritage to create looks that feel effortlessly YOU.</p>
+            <a href="about.html">Meet Navnidhi</a>
+        </div>
+     </section>
+     <section class="banner">
+        <div class="content">
+            <h1> Your big day deserves
+            <em> the finest</em></h1>
+            <p>A fresh look. A little self-care. A celebration of you</p>
+        </div>
+     </section>
+     <footer>
+        <div class="foot-con">
+            <div class="salon">
+                <h2 >Estheva</h2>
+                <strong>By Navnidhi</strong>
+                <p>Where every look is a treasure.
+                Bridal, makeup and hair artistry
+                crafted with love.</p>
+            </div>
+            <div class="foot-contact">
+                <div class="ad">
+                    <strong>Visit Us</strong>
+                    <p><i class="fa-solid fa-location-dot contact-icon" aria-hidden="true"></i> 
+                        Opposite B.K. Post Office, Dayanand Colony, Ramnagar, 
+                            Ajmer (305004)</p>
+                </div>
+                <div class="tel">
+                    <i class="fa-regular fa-comment-dots contact-icon" aria-hidden="true"></i>
+                    <a href="tel:+9829709701">+9829709701</a>
+                </div>
+                <div class="insta">
+                    <i class="fa-brands fa-instagram contact-icon" aria-hidden="true"></i>
+                     <a href="https://www.instagram.com/estheva_by_navnidhi?dlrf=MTRibjFxZjZ2Z25veg==" aria-label="instagram">@Estheva_by_Navnidhi</a>
+                </div>
+            </div>
+            <div class="foot-nav">
+                <strong>Explore</strong>
+                <a href="index.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="service.html">SERVICES</a>
+                <a href="catalogue.html">CATALOGUE</a>
+                <a href="contact.html">CONTACT</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 NAVNIDHI SALON</p>
+        </div>
+     </footer>
 </body>
 </html>

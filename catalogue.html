@@ -4,186 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <link rel="shortcut icon" href="Assets/images/favicon.png" type="image/x-icon"> -->
+    <!-- <link rel="stylesheet" href="Assets/CSS/style.css"> -->
+     <link rel="stylesheet" href="Assets/CSS/new.css">
+     <!-- <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" referrerpolicy="no-referrer">
     <link rel="shortcut icon" href="Assets/images/favicon.png" type="image/x-icon">
     <style>
-        :root {
-            --ivory: #fcf9f2;
-            --cream: #f4ecdf;
-            --cream-deep: #eee2d0;
-            --ink: #302b1e;
-            --muted: #786f61;
-            --gold: #80602e;
-            --gold-light: #b18b4d;
-            --line: #dfd2bf;
-            --serif: "Playfair Display", Georgia, serif;
-            --sans: "DM Sans", Arial, sans-serif;
-        }        
-        *{
-            box-sizing:border-box
-        }
-        html{
-            scroll-behavior:smooth
-        }
-        body{
-            margin:0;
-            background:#fcf9f2;
-            font-family:'DM Sans',sans-serif
-        }
-        .logo{
-            height: 100%;
-            width: 8%;
-        }
-        .nav{
-            background-color: #FEFCF7;
-            height:60px;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            /* border: 1px solid grey; */
-        }
-        #nav1{
-            height: 100%;
-            width: 70%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        ul{
-            height: 100%;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;           
-        }
-        li{
-            height: 100%;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            list-style-type: none;
-        }
-        a{
-            color:#786f61 ;
-            text-decoration: none;
-            font-family: sans-serif;
-            font-size: 100 clamp(1.5rem, 6vw, 4.5rem);
-            align-items: center;
-        }
-        header{
-            background-color:#f4ecdf;
-            padding:56px 20px 36px;
-            text-align:center;
-            border:1px solid #dfd2bf;
-        }
-        .eyebrow{uppercase;
-            letter-spacing:.24em;
-            color:#b18b4d;
-            font-size:.80rem;
-            font-weight:700
-        }
-        h1{
-            font:500 clamp(2.5rem,7vw,4.5rem) 'Playfair Display',serif;
-            margin:12px 0 8px;
-            color: #302b1e;
-        }
-        header p{
-            max-width:620px;
-            margin:0 auto;
-            line-height:1.7;
-            color:#b18b4d;   
-        }
-        #nav2{
-            position:sticky;
-            top:0;
-            z-index:10;;
-            padding:15px;
-            display:flex;
-            gap:12px;
-            justify-content:center;
-            border-bottom: 1px solid#dfd2bf;
-            flex-wrap:wrap;
-        }
-        #nav2 a{
-            color:#80602e ;
-            text-decoration:none;
-            font-size:.90rem;
-            font-weight:700;
-            padding:9px 60px;
-            font-family: sans-serif;
-        }
-        #nav1 a:hover{
-            font-size: 15px;
-        }
-        #nav2 a:hover{
-            font-size: 15px;
-            background-color:#dfd2bf ;
-        }
-         .foot{
-            padding:50px 15px 30px;
-            background-color: #302b1e;
-            color: white;
-         }
-        .foot p{
-            /* background-color:#302b1e; */
-            padding:40px 15px 30px;
-            margin-left: 50px;
-            color: white;
-            padding: 0%;
-            margin:25px;
-        }
-        #first{
-            font:500 clamp(2.5rem,7vw,4.5rem) 'Playfair Display',serif;
-            padding: 0%;     
-         }
-        .text,.slogan{
-            /* background-color: #fcf9f2; */
-            border-bottom: 1px #dfd2bf;
-            text-align: left;
-            margin: 35px;
-        }
-        strong{
-            font-size: 25px;
-            font-family:'Times New Roman', Times, serif;
-        }
-        #text,.name p{
-            margin-top: 10px;
-        }
-        .box{
-            width: 90%;
-            height:auto;
-            /* border: 1px solid black; */
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0,1fr));
-            gap: 20px;
-            padding: 0 20px 30px;
-            margin: 0 auto;
-        }
-        .card{
-            border-radius: 20px;
-            height: 530px;
-            width: 90%;
-            background-color:#eee2d0;
-            /* border: 1px solid blue; */
-        }
-        .b{
-            height: 85%;
-            width: 100%;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        @media (max-width: 576px) {
-            .box {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 12px;
-                padding: 0 12px 20px;
-            }
-
-            .card {
-                height: 250px;
-            }
-        }
         .b1{
             background-image: url(Assets/images/makeup1.png);
         }
@@ -206,7 +33,7 @@
             background-image: url(Assets/images/makeup7.png);
         }
         .b8{
-            background-image: url(Assets/images/makeup8.png);
+            background-image: url(Assets/images/bridal_makeup_website.png);
         }
         .b9{
             background-image: url(Assets/images/makeup9.png);
@@ -227,7 +54,7 @@
             background-image: url(Assets/images/makeup14.png);
         }
         .b15{
-            background-image: url(Assets/images/hairs.png);
+            background-image: url(Assets/images/hair_website.png);
         }
         .b16{
             background-image: url(Assets/images/hairs1.png);
@@ -248,7 +75,7 @@
             background-image: url(Assets/images/nails2.png);
         }
         .b21{
-            background-image: url(Assets/images/nails3.png);
+            background-image: url(Assets/images/nails_website.png);
         }
         .b22{
             background-image: url(Assets/images/nails4.png);
@@ -265,65 +92,36 @@
         .b26{
             background-image: url(Assets/images/nails8.png);
         }
-        h2{
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 38px;
-            font-style: italic;
-            color:#500303;
-            margin-left:52px;
-            padding: 0%;
-        }
-        h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 20px;
-            font-weight:bold;
-            line-height: 1.5;
-            color: rgb(128, 4, 4);
-            margin-left:15px;
-            margin-top: 0%;
-        }
-        .sub p {
-            font-family: 'Inter', sans-serif;
-            font-size: 15px;
-            font-weight: 300;
-            color:#b18b4d;
-            /* pad: 10px 10px 10px 10px; */
-            margin-top: 10px;
-            margin-left: 18px;
-        }
-
     </style>
 </head>
 <body>
-    <div class="nav">
+    <div class="nav-con">
             <div class="logo">
-                <img src="Assets/images/favicon.png" alt="Navnidhi Salon" height="100%" width="100%">
+                <img src="Assets/images/favicon.png" alt="Navnidhi Salon">
             </div>
             <nav id="nav1">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="service.html" >Services</a></li>
-                    <li><a href="catalogue.html" id="page">Catalogue</a></li>
-                    <li><a href="contact2.html">Contact</a></li>
+                    <li><a href="catalogue.html" id="active">Catalogue</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
         <header>
-             <div class="head">-The Estheva Lookbook</div>
+             <div class="head"><p>-The Estheva Lookbook</p></div>
                 <h1>A Little Inspiration. Endless possibilities.</h1>
                 <p> Find a look that speaks to you. We’ll make it your own.</p>
         </header>
         <nav aria-label="Service categories" id="nav2">
-            <a href="">All Looks</a>
-            <a href="">Hairs</a>
-            <a href="">Makeup</a>
-            <a href="">Nails & Grooming</a>
+            <a href="#hair">Hairs</a>
+            <a href="#makeup">Makeup</a>
+            <a href="#nails&care">Nails & Grooming</a>
         </nav>
-      <h2>Explore Our Looks.</h2>
-        
+      <h2 id="explore">Explore Our Looks.</h2>
     <div class="box">
-        <div class="card">
+        <div class="card" id="makeup">
             <div class="b b1"></div>
             <div class="sub">
                 <p>Coctail Special</p>
@@ -421,7 +219,7 @@
                 <h3>Fuchsia dupatta, golden hour</h3>
             </div>
         </div>
-        <div class="card">
+        <div class="card" id="hair">
             <div class="b b15"></div>
             <div class="sub">
                 <p>effortless flow</p>
@@ -442,7 +240,7 @@
                 <h3>Soft waves, effortless grace</h3>
             </div>
         </div>
-        <div class="card">
+        <div class="card" id="nails&care">
             <div class="b b18"></div>
             <div class="sub">
                 <p>Navratri Special</p>
@@ -505,23 +303,51 @@
                 <h3>Cherry gloss, pink swirls</h3>
             </div>
         </div>
-        
     </div>
-        <footer>  
-            <div class="foot">
-                <p id="first">Your next beautiful moment awaits.</p>
-                <p>A fresh look. A little self-care. A celebration of you</p>
+<section class="banner">
+        <div class="content">
+            <h1> Your big day deserves
+            <em> the finest</em></h1>
+            <p>A fresh look. A little self-care. A celebration of you</p>
+        </div>
+     </section>
+     <footer>
+        <div class="foot-con">
+            <div class="salon">
+                <h2>Estheva</h2>
+                <strong>By Navnidhi</strong>
+                <p>Where every look is a treasure.
+                Bridal, makeup and hair artistry
+                crafted with love.</p>
             </div>
-            <div class="text">
-                <div class="name">
-                    <strong>ESTHEVA</strong>
-                    <p>BY NAVNIDHI</p>
+            <div class="foot-contact">
+                <div class="ad">
+                    <strong>Visit Us</strong>
+                    <p><i class="fa-solid fa-location-dot contact-icon" aria-hidden="true"></i>
+                        Opposite B.K. Post Office, Dayanand Colony, Ramnagar, 
+                            Ajmer (305004)</p>
                 </div>
-                <div class="slogan"></div>
-                    <p>Nine treasures. One beautiful you.</p>
-                    <p> Beauty, hair and wellness — thoughtfully curated for you.</p>
-                </div>    
+                <div class="tel">
+                    <i class="fa-regular fa-comment-dots contact-icon" aria-hidden="true"></i>
+                    <a href="tel:+9829709701">+9829709701</a>
+                </div>
+                <div class="insta">
+                    <i class="fa-brands fa-instagram contact-icon" aria-hidden="true"></i>
+                    <a href="https://www.instagram.com/estheva_by_navnidhi?dlrf=MTRibjFxZjZ2Z25veg==" aria-label="instagram">@Estheva_by_Navnidhi</a>
+                </div>
             </div>
-        </footer>
+            <div class="foot-nav">
+                <strong>Explore</strong>
+                <a href="index.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="service.html">SERVICES</a>
+                <a href="catalogue.html">CATALOGUE</a>
+                <a href="contact.html">CONTACT</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 NAVNIDHI SALON</p>
+        </div>
+     </footer>        
 </body>
 </html>
